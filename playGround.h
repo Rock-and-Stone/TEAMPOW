@@ -2,6 +2,7 @@
 #include "gameNode.h"
 #include "string"
 #include "CameraManager.h"
+#include "EnemyManager.h"
 
 
 class playGround : public gameNode
@@ -9,6 +10,7 @@ class playGround : public gameNode
 private:
 	CameraManager* _cm;
 	RECT _player;
+	EnemyManager* _em;
 
 	int _posX;
 	int _posY;

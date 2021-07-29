@@ -55,6 +55,27 @@
     <Filter Include="2DGameFramework\button">
       <UniqueIdentifier>{7cafbb26-69f9-42f6-adf0-8c0bcab2139a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Enemy">
+      <UniqueIdentifier>{e6ab6f58-b312-43f5-9fc4-70e2ed3b65a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\Enemy\EnemyStates">
+      <UniqueIdentifier>{48b0fd63-5ef9-4e99-842c-57cd6628fa56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\Enemy\EnemyManager">
+      <UniqueIdentifier>{cf8eec2b-b032-4144-909f-cd93b18726a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\Enemy\Enemies">
+      <UniqueIdentifier>{81cbc158-2c9f-4a09-8d17-029e5470ae07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\Enemy\Enemies\LUKE">
+      <UniqueIdentifier>{faae66c6-3964-4231-9b79-01a7b1b7e3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\Enemy\Enemies\MIKE">
+      <UniqueIdentifier>{a303a3a2-0c91-4624-b729-76532cc3a3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playGround\Enemy\Enemies\MALCOLM">
+      <UniqueIdentifier>{69b28a3d-7ba6-4c6e-8f8c-ff8419e67b6e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -138,6 +159,15 @@
     <ClInclude Include="CameraManager.h">
       <Filter>2DGameFramework\Manager</Filter>
     </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>playGround\Enemy\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyManager.h">
+      <Filter>playGround\Enemy\EnemyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Luke.h">
+      <Filter>playGround\Enemy\Enemies\LUKE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -208,6 +238,15 @@
     </ClCompile>
     <ClCompile Include="CameraManager.cpp">
       <Filter>2DGameFramework\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>playGround\Enemy\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>playGround\Enemy\EnemyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Luke.cpp">
+      <Filter>playGround\Enemy\Enemies\LUKE</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
