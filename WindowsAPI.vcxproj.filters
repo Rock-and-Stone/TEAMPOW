@@ -168,6 +168,18 @@
     <ClInclude Include="Luke.h">
       <Filter>playGround\Enemy\Enemies\LUKE</Filter>
     </ClInclude>
+    <ClInclude Include="EnemyState.h">
+      <Filter>playGround\Enemy\EnemyStates</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyIdle.h">
+      <Filter>playGround\Enemy\EnemyStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Mike.h">
+      <Filter>playGround\Enemy\Enemies\MIKE</Filter>
+    </ClInclude>
+    <ClInclude Include="Malcolm.h">
+      <Filter>playGround\Enemy\Enemies\MALCOLM</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -247,6 +259,18 @@
     </ClCompile>
     <ClCompile Include="Luke.cpp">
       <Filter>playGround\Enemy\Enemies\LUKE</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyState.cpp">
+      <Filter>playGround\Enemy\EnemyStates</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyIdle.cpp">
+      <Filter>playGround\Enemy\EnemyStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Mike.cpp">
+      <Filter>playGround\Enemy\Enemies\MIKE</Filter>
+    </ClCompile>
+    <ClCompile Include="Malcolm.cpp">
+      <Filter>playGround\Enemy\Enemies\MALCOLM</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

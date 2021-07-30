@@ -20,8 +20,16 @@ HRESULT Enemy::init(const char* imageName, const char* animationName, POINT posi
 
     _motionName = KEYANIMANAGER->findAnimation(animationName);
 
-    _rc = RectMakeCenter(position.x, position.y,
+    _posX = position.x;
+    _posY = position.y;
+
+    _rc = RectMakeCenter(_posX, _posY,
         _imageName->getFrameWidth(), _imageName->getFrameHeight());
+
+    _motionName->start();
+
+   
+    
 
     return S_OK;
 }
@@ -32,6 +40,11 @@ void Enemy::release()
 
 void Enemy::update()
 {
+   
+    _rc = RectMakeCenter(_posX, _posY,
+        _imageName->getFrameWidth(), _imageName->getFrameHeight());
+
+   
 }
 
 void Enemy::render()
@@ -41,9 +54,10 @@ void Enemy::render()
 
 void Enemy::move()
 {
+
 }
 
 void Enemy::draw()
 {
-    _imageName->aniRender(getMemDC(), _rc.left, _rc.top, _motionName);
+    _imageName->aniRender(getMemDC(), _rc.left - _cm->getCamX() , _rc.top - _cm->getCamY(), _motionName);
 }

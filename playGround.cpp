@@ -27,7 +27,11 @@ HRESULT playGround::init()
 	_cm = new CameraManager;
 	_cm->init(31812, 1400);
 
-
+	_em = new EnemyManager;
+	_em->init();
+	_em->SetCamera(_cm);
+	_em->SetLuke();
+	
 
 	return S_OK;
 }
@@ -52,6 +56,8 @@ void playGround::update()
 
 	_cm->update(_posX, _posY);
 	
+	_em->update();
+
 	selectionSort();
 
 }
@@ -95,7 +101,7 @@ void playGround::render()
 
 	IMAGEMANAGER->findImage("background")->render(getMemDC(), 0, 0, _cm->getCamX(), _cm->getCamY(), WINSIZEX, WINSIZEY);
 
-	
+	_em->render();
 	RectangleMakeCenter(getMemDC(), _cm->getRenderPosX(), _cm->getRenderPosY(), 50, 81);
 
 	sprintf_s(str, "char X : %d", _posX);

@@ -1,36 +1,8 @@
 #include "pch.h"
 #include "EnemyManager.h"
+#include "Enemy.h"
 
 HRESULT EnemyManager::init()
-{
-	EnemyImageStorage();
-
-	return S_OK;
-}
-
-void EnemyManager::release()
-{
-}
-
-void EnemyManager::update()
-{
-    //루크를 벡터에 담을게요
-    for (_viLuke = _vLuke.begin(); _viLuke != _vLuke.end(); ++_viLuke)
-    {
-        (*_viLuke)->update();
-    }
-}
-
-void EnemyManager::render()
-{
-    for (_viLuke = _vLuke.begin(); _viLuke != _vLuke.end(); ++_viLuke)
-    {
-        RECT temp = (*_viLuke)->GetRect();
-        (*_viLuke)->render();
-    }
-}
-
-void EnemyManager::EnemyImageStorage()
 {
     //루크 이미지 저장소
 #pragma region LUKEIMAGES
@@ -302,6 +274,44 @@ void EnemyManager::EnemyImageStorage()
     KEYANIMANAGER->addArrayFrameAnimation("MALCOLMrightGuard", "MALCOLM_GUARD", MALCOLMrightGuard, 2, 6, false);
 #pragma endregion
 
+  /*  _motionName = KEYANIMANAGER->findAnimation("LUKEleftIdle");
+    
+    KEYANIMANAGER->start("LUKEleftIdle");*/
+
+    
+
+	return S_OK;
+}
+
+void EnemyManager::release()
+{
+}
+
+void EnemyManager::update()
+{
+    //루크를 벡터에 담을게요
+    for (_viLuke = _vLuke.begin(); _viLuke != _vLuke.end(); ++_viLuke)
+    {
+        (*_viLuke)->update();
+        
+    }
+
+    KEYANIMANAGER->update();
+    
+}
+
+void EnemyManager::render()
+{
+    for (_viLuke = _vLuke.begin(); _viLuke != _vLuke.end(); ++_viLuke)
+    {
+        RECT temp = (*_viLuke)->GetRect();
+        (*_viLuke)->render();
+    }
+}
+
+void EnemyManager::EnemyImageStorage()
+{
+
 }
 
 void EnemyManager::SetLuke()
@@ -310,7 +320,8 @@ void EnemyManager::SetLuke()
     {
         Enemy* luke;
         luke = new Luke;
-        luke->init("LUKE_IDLE", "LUKE_leftIdle", PointMake(200 * i, 300));
+        luke->SetCamera(_cm);
+        luke->init("LUKE_IDLE", "LUKEleftIdle" , PointMake(800 * i + 800, 700));
         _vLuke.push_back(luke);
     }
 }

@@ -1,18 +1,18 @@
 #pragma once
 #include "Enemy.h"
-
-class Luke : public Enemy
+class Malcolm :
+    public Enemy
 {
 private:
 
 public:
-	Luke();
-	~Luke();
+	Malcolm();
+	~Malcolm();
 
 	virtual HRESULT init();
 	virtual void release();
 	virtual void update();
-	
+
 
 	virtual void SwitchImage() override;
 };

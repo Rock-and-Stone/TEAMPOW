@@ -3,6 +3,7 @@
 #include "string"
 #include "CameraManager.h"
 #include "EnemyManager.h"
+#include "Enemy.h"
 
 
 class playGround : public gameNode
@@ -11,6 +12,7 @@ private:
 	CameraManager* _cm;
 	RECT _player;
 	EnemyManager* _em;
+	Enemy* _enemy;
 
 	int _posX;
 	int _posY;

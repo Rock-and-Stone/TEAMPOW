@@ -1,5 +1,8 @@
 #pragma once
 #include "gameNode.h"
+#include "CameraManager.h"
+
+#define ENEMYSPEED 5.0f
 
 //에너미 방향 enum 클래스
 enum class ENEMYDIRECTION
@@ -36,12 +39,17 @@ class Enemy : public gameNode
 protected:
 	ENEMYDIRECTION _enemyDirection;
 	ENEMYSTATEMENT _enemyStatement;
+	CameraManager* _cm;
 
 	image* _imageName;
 	animation* _motionName;
 	RECT _rc;
 
 	float _posX, _posY;
+	float _probeX, _probeY;
+	float _jumpPower, _gravity;
+
+	int _hp;
 	
 
 public:
@@ -54,10 +62,31 @@ public:
 	virtual void update();
 	virtual void render();
 
+	virtual void SwitchImage() = 0;
+
 	void move();
 	void draw();
 
+	//에너미 렉트 접근자
 	inline RECT GetRect() { return _rc; }
 
+	//에너미 상태 설정자, 접근자
+	void SetEnemyStatement(ENEMYSTATEMENT enemyStatement) { _enemyStatement = enemyStatement; }
+	ENEMYSTATEMENT GetEnemyStatement() { return _enemyStatement; }
+
+	//에너미 방향 설정자, 접근자
+	void SetEnemyDirection(ENEMYDIRECTION enemyDirection) { _enemyDirection = enemyDirection; }
+	ENEMYDIRECTION GetEnemyDirection() { return _enemyDirection; }
+
+	//이미지 접근자
+	image* GetImageName() { return _imageName; }
+	
+
+	//애니메이션 따오기
+	void SetMotionName(animation* motionName) { _motionName =  motionName; }
+	animation* GetMotionName() { return _motionName; }
+
+	//카메라 설정
+	void SetCamera(CameraManager* cm) { _cm = cm; }
 };
 
