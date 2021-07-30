@@ -20,28 +20,14 @@ HRESULT playGround::init()
 	IMAGEMANAGER->addImage("배경", "background.bmp", WINSIZEX, WINSIZEY, true,
 		RGB(255, 0, 255));
 	
-	INIDATA->addData("선우", "코딩력", "10");
-	INIDATA->addData("선우", "방구석여포력", "100");
-	INIDATA->addData("선우", "형들에게이쁨받는력", "94");
-
-	INIDATA->addData("문철", "코딩력", "800");
-	INIDATA->addData("문철", "신성력", "1000");
-	INIDATA->addData("문철", "부품판별력", "500");
-
-	INIDATA->addData("문철", "코딩력", "500");
-	INIDATA->addData("문철", "신성력", "1000");
-	INIDATA->addData("문철", "부품판별력", "500");
-
-	INIDATA->iniSave("29기");
-
-	_str = INIDATA->loadDataString("29기", "문철", "신성력");
-	_power = INIDATA->loadDataInterger("29기", "문철", "신성력");
-
-	_posX = 27000;
+	_posX = 100;
 	_posY = WINSIZEY / 2;
 
 	_cm = new CameraManager;
 	_cm->init(31812, 1400);
+
+	_player = new player;
+	_player->init();
 
 	return S_OK;
 }
@@ -66,6 +52,8 @@ void playGround::update()
 
 	_cm->update(_posX, _posY);
 	selectionSort();
+
+	_player->update();
 
 }
 
@@ -107,6 +95,8 @@ void playGround::render()
 	SetTextColor(getMemDC(), RGB(0, 0, 0));
 
 	IMAGEMANAGER->findImage("background")->render(getMemDC(), 0, 0, _cm->getCamX(), _cm->getCamY(), WINSIZEX, WINSIZEY);
+
+	_player->render();
 
 	RectangleMakeCenter(getMemDC(), _cm->getRenderPosX(), _cm->getRenderPosY(), 50, 81);
 

@@ -2,13 +2,15 @@
 #include "gameNode.h"
 #include "string"
 #include "CameraManager.h"
+#include "player.h"
 
 
 class playGround : public gameNode
 {
 private:
 	CameraManager* _cm;
-	RECT _player;
+	
+	player* _player;
 
 	int _posX;
 	int _posY;
