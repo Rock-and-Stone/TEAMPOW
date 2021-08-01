@@ -15,10 +15,11 @@ playGround::~playGround()
 HRESULT playGround::init()
 {
 	gameNode::init(true);
-
+	
 	IMAGEMANAGER->addImage("background", "Level 1 - Frozen Suburbs.bmp", 31812, 1400, true, MAGENTA);
 	IMAGEMANAGER->addImage("¹è°æ", "background.bmp", WINSIZEX, WINSIZEY, true,
 		RGB(255, 0, 255));
+	
 	
 
 	_posX = 200;
@@ -31,6 +32,9 @@ HRESULT playGround::init()
 	_em->init();
 	_em->SetCamera(_cm);
 	_em->SetLuke();
+	_em->SetMike();
+	_em->SetMalcolm();
+	
 	
 
 	return S_OK;
@@ -49,10 +53,13 @@ void playGround::update()
 {
 	gameNode::update();
 
+	
 	if (KEYMANAGER->isStayKeyDown(VK_LEFT)) _posX -= 5;
 	if (KEYMANAGER->isStayKeyDown(VK_RIGHT)) _posX += 5;
 	if (KEYMANAGER->isStayKeyDown(VK_UP)) _posY -= 5;
 	if (KEYMANAGER->isStayKeyDown(VK_DOWN)) _posY += 5;
+
+	
 
 	_cm->update(_posX, _posY);
 	
@@ -138,7 +145,7 @@ void playGround::render()
 	SelectObject(getMemDC(), oldFont2);
 	DeleteObject(font2);
 
-
+	
 
 	TIMEMANAGER->render(getMemDC());
 

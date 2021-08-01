@@ -33,7 +33,7 @@ void Luke::SwitchImage()
 	//_imageName = IMAGEMANAGER->findImage("LUKE_IDLE");
 	//_motionName = KEYANIMANAGER->findAnimation("LUKEleftIdle");
 
-	if (KEYMANAGER->isOnceKeyDown('Q'))
+	if (KEYMANAGER->isStayKeyDown('Q'))
 	{
 		_imageName = IMAGEMANAGER->findImage("LUKE_JUMP");
 		_motionName = KEYANIMANAGER->findAnimation("LUKEleftJump");

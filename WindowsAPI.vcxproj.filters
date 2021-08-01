@@ -76,6 +76,9 @@
     <Filter Include="playGround\Enemy\Enemies\MALCOLM">
       <UniqueIdentifier>{69b28a3d-7ba6-4c6e-8f8c-ff8419e67b6e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Shop">
+      <UniqueIdentifier>{4b6883ce-d85b-4208-9c88-35543b28e539}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -180,6 +183,21 @@
     <ClInclude Include="Malcolm.h">
       <Filter>playGround\Enemy\Enemies\MALCOLM</Filter>
     </ClInclude>
+    <ClInclude Include="EnemyJump.h">
+      <Filter>playGround\Enemy\EnemyStates</Filter>
+    </ClInclude>
+    <ClInclude Include="sushiScene.h">
+      <Filter>playGround\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="restaurantScene.h">
+      <Filter>playGround\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="cafeScene.h">
+      <Filter>playGround\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="convenientScene.h">
+      <Filter>playGround\Shop</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -271,6 +289,21 @@
     </ClCompile>
     <ClCompile Include="Malcolm.cpp">
       <Filter>playGround\Enemy\Enemies\MALCOLM</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyJump.cpp">
+      <Filter>playGround\Enemy\EnemyStates</Filter>
+    </ClCompile>
+    <ClCompile Include="sushiScene.cpp">
+      <Filter>playGround\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="restaurantScene.cpp">
+      <Filter>playGround\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="cafeScene.cpp">
+      <Filter>playGround\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="convenientScene.cpp">
+      <Filter>playGround\Shop</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
