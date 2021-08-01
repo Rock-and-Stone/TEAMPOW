@@ -55,6 +55,12 @@
     <Filter Include="2DGameFramework\button">
       <UniqueIdentifier>{7cafbb26-69f9-42f6-adf0-8c0bcab2139a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Player">
+      <UniqueIdentifier>{96f0f3b3-7df4-4d4d-baf5-6d398faa6ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2DGameFramework\State">
+      <UniqueIdentifier>{d39286ba-4658-4544-ba71-8d6b974c8d64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -138,6 +144,18 @@
     <ClInclude Include="CameraManager.h">
       <Filter>2DGameFramework\Manager</Filter>
     </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>playGround\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Ramona.h">
+      <Filter>playGround\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Scott.h">
+      <Filter>playGround\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -208,6 +226,18 @@
     </ClCompile>
     <ClCompile Include="CameraManager.cpp">
       <Filter>2DGameFramework\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>playGround\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Ramona.cpp">
+      <Filter>playGround\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scott.cpp">
+      <Filter>playGround\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
