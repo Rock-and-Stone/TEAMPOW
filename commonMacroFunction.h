@@ -14,6 +14,15 @@ inline POINT PointMake(int x, int y)
 	return pt;
 }
 
+inline void LineRectangle(HDC hdc, int x1, int y1, int x2, int y2)
+{
+	MoveToEx(hdc, x1, y1, NULL);
+	LineTo(hdc, x1, y2);
+	LineTo(hdc, x2, y2);
+	LineTo(hdc, x2, y1);
+	LineTo(hdc, x1, y1);
+}
+
 
 //렉트관련 매크로
 inline RECT RectMake(int x, int y, int width, int height)
