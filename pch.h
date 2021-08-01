@@ -22,6 +22,7 @@ using namespace std;
 #include "sceneManager.h"
 #include "soundManager.h"
 #include "keyAniManager.h"
+#include "RenderManager.h"
 #include "utils.h"
 #include "txtData.h"
 #include "iniDataManager.h"
@@ -49,6 +50,7 @@ using namespace TN_UTILS;
 #define SCENEMANAGER sceneManager::getSingleton()
 #define SOUNDMANAGER soundManager::getSingleton()
 #define KEYANIMANAGER keyAniManager::getSingleton()
+#define RENDERMANAGER RenderManager::getSingleton()
 #define TXTDATA txtData::getSingleton()
 #define INIDATA iniDataManager::getSingleton()
 

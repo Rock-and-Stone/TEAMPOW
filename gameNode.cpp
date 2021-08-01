@@ -35,6 +35,7 @@ HRESULT gameNode::init(bool managerInit)
 		SCENEMANAGER->init();
 		SOUNDMANAGER->init();
 		KEYANIMANAGER->init();
+		RENDERMANAGER->init();
 		TXTDATA->init();
 		INIDATA->init();
 	}
@@ -71,6 +72,9 @@ void gameNode::release()
 
 		KEYANIMANAGER->release();
 		KEYANIMANAGER->releaseSingleton();
+
+		RENDERMANAGER->release();
+		RENDERMANAGER->releaseSingleton();
 
 		INIDATA->release();
 		INIDATA->releaseSingleton();
