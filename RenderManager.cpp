@@ -27,13 +27,13 @@ void RenderManager::update()
 
 void RenderManager::render(HDC hdc)
 {
-	SetTextColor(hdc, RGB(255, 255, 255));
+	/*SetTextColor(hdc, RGB(255, 255, 255));
 	char str[128];
 	for (int i = 0; i < ARRSIZE; i++)
 	{
 		sprintf_s(str, "%d", _arr[i]);
 		TextOut(hdc, 100 + 50 * i, 90, str, strlen(str));
-	}
+	}*/
 }
 
 

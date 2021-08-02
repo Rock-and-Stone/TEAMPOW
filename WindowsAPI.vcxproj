@@ -172,9 +172,12 @@
     <ClInclude Include="Malcolm.h" />
     <ClInclude Include="Mike.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="player.h" />
     <ClInclude Include="playGround.h" />
     <ClInclude Include="progressBar.h" />
+    <ClInclude Include="Ramona.h" />
     <ClInclude Include="randomFunction.h" />
+    <ClInclude Include="RenderManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="restaurantScene.h" />
     <ClInclude Include="sceneManager.h" />
@@ -217,8 +220,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="playGround.cpp" />
     <ClCompile Include="progressBar.cpp" />
+    <ClCompile Include="Ramona.cpp" />
+    <ClCompile Include="RenderManager.cpp" />
     <ClCompile Include="restaurantScene.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="soundManager.cpp" />

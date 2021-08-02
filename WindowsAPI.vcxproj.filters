@@ -79,6 +79,9 @@
     <Filter Include="playGround\Shop">
       <UniqueIdentifier>{4b6883ce-d85b-4208-9c88-35543b28e539}</UniqueIdentifier>
     </Filter>
+    <Filter Include="playGround\Player">
+      <UniqueIdentifier>{afdd716d-30a0-497d-8354-23c6dadb0212}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -198,6 +201,15 @@
     <ClInclude Include="convenientScene.h">
       <Filter>playGround\Shop</Filter>
     </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Ramona.h">
+      <Filter>playGround\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>playGround\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsAPI.cpp">
@@ -304,6 +316,15 @@
     </ClCompile>
     <ClCompile Include="convenientScene.cpp">
       <Filter>playGround\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager.cpp">
+      <Filter>2DGameFramework\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Ramona.cpp">
+      <Filter>playGround\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>playGround\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
