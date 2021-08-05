@@ -19,7 +19,7 @@ public:
 	CameraManager();
 	~CameraManager();
 
-	HRESULT init(int mapSizeX, float mapSizeY);
+	HRESULT init(int mapSizeX, int mapSizeY);
 	virtual void release();
 	virtual void update(int playerX, int playerY);
 

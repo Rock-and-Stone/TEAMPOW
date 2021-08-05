@@ -9,7 +9,7 @@ CameraManager::~CameraManager()
 {
 }
 
-HRESULT CameraManager::init(int mapSizeX, float mapSizeY)
+HRESULT CameraManager::init(int mapSizeX, int mapSizeY)
 {
     _posX = WINSIZEX / 2;
     _posY = WINSIZEY / 2;
