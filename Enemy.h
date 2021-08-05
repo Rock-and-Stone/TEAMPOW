@@ -1,6 +1,16 @@
 #pragma once
 #include "gameNode.h"
 #include "CameraManager.h"
+#include "EnemyIdle.h"
+#include "EnemyWalk.h"
+#include "EnemyRun.h"
+#include "EnemyJump.h"
+#include "EnemyAttack1.h"
+#include "EnemyAttack3.h"
+#include "EnemyDamaged.h"
+#include "EnemyGuard.h"
+#include "EnemyDown.h"
+#include "EnemyUp.h"
 
 #define ENEMYSPEED 5.0f
 
@@ -45,11 +55,27 @@ protected:
 	animation* _motionName;
 	RECT _rc;
 
-	float _posX, _posY;
-	float _probeX, _probeY;
-	float _jumpPower, _gravity;
+	//상태패턴
+	EnemyState* _state;
+	EnemyIdle* _idle;
+	EnemyWalk* _walk;
+	EnemyRun* _run;
+	EnemyJump* _jump;
+	EnemyAttack1* _attack1;
+	EnemyAttack3* _attack3;
+	EnemyDamaged* _damaged;
+	EnemyDown* _down;
+	EnemyGuard* _guard;
+	EnemyUp* _up;
+	
 
-	int _hp;
+
+	float _posX, _posY;				//에너미 x, y 좌표
+	float _probeX, _probeY;			//픽셀 충돌 시
+	float _jumpPower, _gravity;		//점프, 중력
+	float _distance; //플레이어와의 거리 계산
+
+	int _hp;	//플레이어 체력
 	
 
 public:
@@ -64,8 +90,13 @@ public:
 
 	virtual void SwitchImage() = 0;
 
-	void move();
-	void draw();
+	void Move();
+	void Draw();
+
+	void Collision();
+
+	void TracePlayer();
+	void ChangeStatement();
 
 	//에너미 렉트 접근자
 	inline RECT GetRect() { return _rc; }
