@@ -1,24 +1,20 @@
 #pragma once
+
+
 #include "gameNode.h"
 #include "string"
-#include "CameraManager.h"
-#include "Ramona.h"
-#define ARRSIZE 10
+#include "SettingScene.h"
+#include "stage1.h"
+#include "titleScene.h"
+#include "selectScene.h"
+
+
+
 
 class playGround : public gameNode
 {
 private:
-	CameraManager* _cm;
-	player* _player;
 
-	int _posX;
-	int _posY;
-
-	char* _str;
-
-	int _power;
-
-	int _arr[ARRSIZE] = { 2 , 5 ,1 , 4 , 7 , 8 , 9, 3, 11, 10 };
 
 public:
 	playGround();

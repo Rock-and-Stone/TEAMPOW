@@ -17,7 +17,7 @@ sceneManager::~sceneManager()
 HRESULT sceneManager::init()
 {
 	_currentScene = nullptr;
-
+	_isVideoPlay = false;
 	return S_OK;
 }
 

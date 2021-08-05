@@ -11,6 +11,8 @@ private:
 	typedef map<string, gameNode*>				mapSceneList;
 	typedef map<string, gameNode*>::iterator	mapSceneIter;
 
+	bool _isVideoPlay;
+
 private:
 	static gameNode* _currentScene;
 
@@ -29,5 +31,8 @@ public:
 	gameNode* addScene(string sceneName, gameNode* scene);
 
 	HRESULT changeScene(string sceneName);
+
+	bool GetVideoPlay() { return _isVideoPlay; }
+	void SetVideoPlay(bool isPlay) { _isVideoPlay = isPlay; }
 };
 
