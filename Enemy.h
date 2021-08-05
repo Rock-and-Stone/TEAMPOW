@@ -95,6 +95,9 @@ public:
 
 	void Collision();
 
+	void TracePlayer();
+	void ChangeStatement();
+
 	//에너미 렉트 접근자
 	inline RECT GetRect() { return _rc; }
 
