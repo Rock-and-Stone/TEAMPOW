@@ -1,20 +1,26 @@
 #pragma once
 #include "singletonBase.h"
+
 #include <vector>
-#include <map>
+
 
 #define ARRSIZE 10
+
+
+class gameNode;
 
 class RenderManager :  public singletonBase<RenderManager>
 {
 private:
-	typedef map<image*, int>	arrOrder;
-	typedef map<image*, int>::iterator	iterOrder;
+
+	typedef vector<gameNode*>				arrRender;
+	typedef vector<gameNode*>::iterator		iterRender;
 
 	int _arr[ARRSIZE] = { 2 , 5 ,1 , 4 , 7 , 8 , 9, 3, 11, 10 };
 
 private:
-	arrOrder _zOrder;
+	arrRender _vRender;
+	iterRender _viRender;
 
 public:
 	RenderManager();
@@ -26,9 +32,10 @@ public:
 	void render(HDC hdc);
 
 	void swap(int* a, int* b);
+	void swap(gameNode** a, gameNode** b);
 	void selectionSort();
 	void bubbleSort();
+	void addRender(gameNode * obj);
 
-	void addImage(image* img, int posY);
 };
 
